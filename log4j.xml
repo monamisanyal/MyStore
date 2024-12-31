@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!-- Console Appender - Writes logs to the console -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <!-- Define the log format using the PatternLayout -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <!-- Pattern for log message format: timestamp, thread, log level, logger name, and the log message -->
+            <param name="ConversionPattern" value="%d{ISO8601} [%t] %-5p %c{1} - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- File Appender - Writes logs to a file -->
+    <appender name="fileAppender" class="org.apache.log4j.RollingFileAppender">
+        <!-- Log file location and name -->
+        <param name="file" value="Logs/log4j.log"/>
+        <!-- Define the layout format for the file logs -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <!-- Pattern for log message format in file -->
+            <param name="ConversionPattern" value="%d{ISO8601} [%t] %-5p %c{1} - %m%n"/>
+        </layout>
+        <!-- Log file will be overwritten each time -->
+        <param name="append" value="true"/>
+    </appender>
+
+    <!-- Root logger configuration -->
+    <root>
+        <!-- Set the default log level to DEBUG -->
+        <level value="debug"/>
+        <!-- Attach both console and file appenders to the root logger -->
+        <appender-ref ref="console"/>
+        <appender-ref ref="fileAppender"/>
+    </root>
+
+  
+
+</log4j:configuration>

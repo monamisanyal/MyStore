@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [CrossBrowser]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="CrossBrowser_Chrome Test(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.mystore.testcases.priceTest">
+        <methods>
+          <include name="setup"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+          <include name="verifytoalprice"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.priceTest -->
+    </classes>
+  </test> <!-- CrossBrowser_Chrome Test(failed) -->
+  <test thread-count="5" parallel="tests" name="CrossBrowser_Firefox Test(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.mystore.testcases.EndtoEndTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="Testorderproduct"/>
+          <include name="teardown"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.EndtoEndTest -->
+      <class name="com.mystore.testcases.priceTest">
+        <methods>
+          <include name="setup"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+          <include name="verifytoalprice"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.priceTest -->
+    </classes>
+  </test> <!-- CrossBrowser_Firefox Test(failed) -->
+  <test thread-count="5" parallel="tests" name="CrossBrowser_IE Test(failed)">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="com.mystore.testcases.accountcreationPageTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="createaccount"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.accountcreationPageTest -->
+      <class name="com.mystore.testcases.EndtoEndTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="Testorderproduct"/>
+          <include name="teardown"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.EndtoEndTest -->
+      <class name="com.mystore.testcases.priceTest">
+        <methods>
+          <include name="setup"/>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+          <include name="verifytoalprice"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.priceTest -->
+      <class name="com.mystore.testcases.LoginPageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="BeforeSuite"/>
+          <include name="loginTest"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.LoginPageTest -->
+      <class name="com.mystore.testcases.HomePageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="BeforeSuite"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="verifyOrderHistory"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.HomePageTest -->
+      <class name="com.mystore.testcases.IndexPageTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="verifyLogo"/>
+          <include name="verifyTitle"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.IndexPageTest -->
+      <class name="com.mystore.testcases.productavailabiltyTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="setup"/>
+          <include name="checkproductavailability"/>
+          <include name="teardown"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.productavailabiltyTest -->
+      <class name="com.mystore.testcases.addtocartTest">
+        <methods>
+          <include name="BeforeSuite"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="checkitemaddedincart"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.addtocartTest -->
+    </classes>
+  </test> <!-- CrossBrowser_IE Test(failed) -->
+</suite> <!-- Failed suite [CrossBrowser] -->
